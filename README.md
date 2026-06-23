@@ -1,3 +1,8 @@
+## 🔗 Wszystkie modele i repozytoria
+Pełna lista projektów znajduje się na stronie:
+https://jbackk-lang.github.io
+---
+
 # probabilistic‑timdr
 Model łączący rachunek prawdopodobieństwa, warunki brzegowe i topologię TIMDR.
 
