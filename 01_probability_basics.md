@@ -39,13 +39,20 @@ Prawdopodobieństwo, że **co najmniej dwie osoby** mają urodziny tego samego d
 |--------|--------------------------|
 | 2 | 0.27% |
 | 5 | 2.71% |
-| 10 | 11.70% |
-| 13 | 18.74% |
-| 20 | 37.62% |
-| 22 | 43.57% |
+| 10 | 11.69% |
+| 13 | 19.44% |
+| 20 | 41.14% |
+| 22 | 47.57% |
 | **23** | **50.73%** |
 
 Próg 50% pojawia się przy **23 osobach**.
+
+> **Poprawka:** wartości dla N=13, 20 i 22 w poprzedniej wersji tej
+> tabeli (18.74%, 37.62%, 43.57%) były błędne — nie zgadzały się
+> z dokładnym wzorem `P = 1 - 365!/((365-N)!*365^N)`. Powyższe wartości
+> zostały przeliczone programowo (bez zaokrągleń pośrednich) i
+> zweryfikowane: dla N=23 dają znane, podręcznikowe 50.73%, co jest
+> dobrym testem poprawności metody liczenia.
 
 ---
 

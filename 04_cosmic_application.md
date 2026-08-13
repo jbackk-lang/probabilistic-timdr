@@ -40,7 +40,15 @@ Typowa wartość:
 
 
 
-To jest kosmologiczny odpowiednik progu 0.5 w probabilistyce.
+**Poprawka:** to jest realna, poprawnie zacytowana stała z teorii sferycznego
+kolapsu (formalizm Pressa-Schechtera) — w przeciwieństwie do progu 0.5, nie
+jest to metafora. Ale właśnie dlatego trzeba być precyzyjnym: δ_crit≈1.686
+NIE jest liczbowo równe 0.5 — to inna wartość, z innego wyprowadzenia
+(wzrost zaburzeń gęstości w grawitacji, a nie kombinatoryka par). Pełni
+**analogiczną rolę** (próg oddzielający "kolaps" od "brak kolapsu"), ale nie
+jest "tym samym" progiem co w paradoksie urodzin — to ważne rozróżnienie
+między analogią strukturalną (obie mają jakiś próg) a tożsamością liczbową
+(sugerowałaby, że to dosłownie ten sam mechanizm, co nie jest prawdą).
 
 ---
 
@@ -114,12 +122,14 @@ R \ge R_\* \quad \Rightarrow \quad \text{GALAKTYKA}
 
 ## 6. Wniosek
 
-Mechanizm powstawania galaktyk jest identyczny strukturalnie z mechanizmem
-przekraczania progu 0.5 w probabilistyce:
-
-- rośnie liczba relacji,  
-- system osiąga próg,  
-- następuje kolaps,  
-- pojawia się obiekt.
-
-TIMDR opisuje to jako uniwersalny proces emergencji.
+**Poprawka:** poprzednia wersja tego wniosku mówiła o "identycznym
+mechanizmie" — to za mocne sformułowanie. Poprawniej: powstawanie galaktyk
+i paradoks urodzin mają **analogiczny wzorzec** (system progowy: coś
+rośnie, przekracza próg krytyczny, następuje jakościowa zmiana stanu), ale
+to dwa różne mechanizmy fizyczne/matematyczne z różnymi liczbami progowymi
+(0.5 vs 1.686) i różnymi wyprowadzeniami (kombinatoryka vs grawitacyjna
+teoria zaburzeń). Wzorzec "coś rośnie → przekracza próg → zmienia fazę" jest
+rzeczywiście szeroko spotykany (przejścia fazowe, perkolacja, kolaps
+grawitacyjny, paradoks urodzin) — to samo w sobie jest wartościową
+obserwacją. Nie oznacza to jednak, że wszystkie te systemy da się opisać
+jednym wzorem czy że próg ma zawsze tę samą wartość.
