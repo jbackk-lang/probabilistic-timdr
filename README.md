@@ -37,6 +37,40 @@ Struktura repo:
    (EasySound, Senscore, KHIPU, ten projekt) — żadna z nich nie liczy tej
    samej rzeczy.
 
+6. `probabilistic_timdr/` (kod, dodano 2026-08-26)  
+   Do tego momentu repo było czystym markdown bez jednego wzoru
+   obliczeniowego (punkt 1 w `TIMDR_POROWNANIE.md` mówił to wprost). Ten
+   pakiet dodaje działający, przetestowany kod dla trzech twierdzeń z
+   dokumentów — patrz sekcja niżej.
+
+## Kod obliczeniowy (`probabilistic_timdr/`)
+
+Cztery moduły, każdy odpowiadający konkretnemu twierdzeniu z dokumentów
+01–04, plus 27 testów (`pytest`, wszystkie przechodzą):
+
+| Moduł | Co robi | Weryfikuje |
+|---|---|---|
+| `birthday.py` | dokładna kombinatoryka: `C(N,2)`, `P(≥1 wspólnych urodzin)` bez przybliżeń | tabelę z `01_probability_basics.md` co do 0.01 punktu procentowego; `first_n_crossing_threshold(0.5) == 23` |
+| `percolation.py` | symulacja Monte Carlo (union-find) perkolacji wiązaniowej na siatce kwadratowej L×L | próg ≈0.5 z `02_boundary_constant.md` — odtwarza sigmoidalne przejście wyśrodkowane blisko 0.5; pozostałe 5 wartości z tabeli są jawnie oznaczone `CITED` (cytowane z literatury, NIE symulowane tutaj) |
+| `spherical_collapse.py` | **niezależne wyprowadzenie** δ_crit z parametrycznego (cykloidalnego) rozwiązania kolapsu top-hat (rozwinięcie Taylora + dopasowanie do wzrostu liniowego EdS), nie tylko zacytowana stała | zgodność wyprowadzenia z zamkniętym wzorem `(3/20)(12π)^(2/3)` i z wartością z `04_cosmic_application.md` (≈1.686) do 1e-9 |
+| `threshold_schema.py` | działająca wersja schematu `R_total ≥ R* ⇒ OBIEKT` z `03_timdr_mapping.md` — ale z TRZEMA niezależnymi progami (0.5 z kombinatoryki, 0.5 z symulacji perkolacji, ≈1.686 z kolapsu sferycznego), nie jedną uniwersalną stałą | `compare_thresholds()` pokazuje wprost, że progi się różnią mimo wspólnego interfejsu |
+
+Instalacja i testy:
+
+```bash
+pip install -r requirements.txt
+pytest -v
+```
+
+To domyka lukę, którą sam `TIMDR_POROWNANIE.md` już wskazywał: teraz
+`probabilistic-timdr` ma — obok trzech pozostałych repo TIMDR — realny,
+sprawdzalny kod, a nie tylko etykiety pojęciowe. Nie zmienia to jednak
+głównego wniosku z sekcji "Status poprawek" niżej: trzy zaimplementowane
+progi (0.5 kombinatoryczne, 0.5 perkolacyjne, 1.686 kosmologiczne) to
+nadal trzy osobne wyprowadzenia, nie jedna uniwersalna stała — kod to
+teraz egzekwuje (`ThresholdSystem.threshold_source` różni się dla
+każdego), zamiast tylko o tym wspominać w tekście.
+
 ## Status poprawek
 
 Ten model łączy trzy rodzaje twierdzeń o różnej mocy dowodowej:
