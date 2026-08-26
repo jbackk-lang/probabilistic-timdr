@@ -33,9 +33,11 @@ Struktura repo:
    *(doprecyzowano: δ_crit≈1.686 to inna liczba niż 0.5, analogia strukturalna, nie tożsamość)*
 
 5. TIMDR_POROWNANIE.md  
-   Zestawienie czterech różnych definicji "TIMDR" w repozytoriach autora
-   (EasySound, Senscore, KHIPU, ten projekt) — żadna z nich nie liczy tej
-   samej rzeczy.
+   Zestawienie pięciu różnych definicji "TIMDR" w repozytoriach autora
+   (Synoptyk-v2.0, EasySound, Senscore, KHIPU, ten projekt) — żadna z nich
+   nie liczy tej samej rzeczy. *(2026-08-26: dodano Synoptyk-v2.0 jako
+   piąty wpis — to w istocie źródłowa definicja, od której wzięły się
+   cztery sygnały anomalia/defekt/rezonans/skręt.)*
 
 6. `probabilistic_timdr/` (kod, dodano 2026-08-26)  
    Do tego momentu repo było czystym markdown bez jednego wzoru
@@ -79,5 +81,5 @@ Ten model łączy trzy rodzaje twierdzeń o różnej mocy dowodowej:
 - **analogia pojęciowa, nie dowód** — twierdzenie, że różne systemy progowe
   są "tym samym mechanizmem" (TIMDR). Wzorzec "próg krytyczny" jest realny
   i częsty, ale konkretna wartość progu i wzór, którym się go liczy, są
-  różne w każdej dziedzinie — tak jak różne są cztery definicje TIMDR
+  różne w każdej dziedzinie — tak jak różne jest pięć definicji TIMDR
   w repozytoriach autora (patrz `TIMDR_POROWNANIE.md`).

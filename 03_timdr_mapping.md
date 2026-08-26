@@ -106,23 +106,27 @@ TIMDR jest naturalnym rozszerzeniem probabilistyki:
 ## 6. Uwaga: ten akronim T-I-M-D-R jest specyficzny dla tego repozytorium
 
 **Poprawka:** nazwa "TIMDR" jest używana w kilku innych repozytoriach tego
-samego autora (EasySound, Senscore, KHIPU), ale w każdym oznacza coś innego
-— nie jest to ten sam mechanizm wywoływany pod różnymi postaciami, tylko ta
-sama nazwa nadana czterem różnym, niepowiązanym konstrukcjom:
+samego autora (Synoptyk-v2.0, EasySound, Senscore, KHIPU), ale w każdym
+oznacza coś innego — nie jest to ten sam mechanizm wywoływany pod różnymi
+postaciami, tylko ta sama nazwa nadana pięciu różnym, niepowiązanym
+konstrukcjom:
 
 | Repozytorium | Co robi "TIMDR" | Typ obiektu |
 |---|---|---|
+| Synoptyk-v2.0 (`TIMDRAnalyzer`) | liczy 4 niezależne sygnały (anomalia/defekt/rezonans/skręt) na szeregu czasowym stacji pogodowej, progi adaptacyjne z rozstępu p10-p90 | cztery listy zdarzeń czasowych, nie jedna liczba |
 | EasySound (`TIMDRAnalyzer`) | liczy Λ = τ/ρ + J na podstawie fazy sygnału analitycznego (transformata Hilberta) — wskaźnik "szorstkości fazowej" sygnału audio | ciągła wielkość liczbowa z przetwarzania sygnałów |
 | Senscore (`TIMDRFilter`) | odrzuca hity detektora, których energia odstaje >3 odchylenia standardowe, i przycina ogony rozkładu czasowego | filtr statystyczny (z-score + percentyle) |
 | KHIPU (`TIMDR` validator) | sprawdza, czy para (skręt S, kierunek K) węzła jest zgodna z regułą wyprowadzenia; pilnuje "zasady 1/2 i φ" | dyskretny walidator par + reguła bilansu |
 | probabilistic-timdr (ten plik) | akronim T-I-M-D-R = Topologia/Informacja/Model/Dynamika/Rezonans, próg R_total ≥ R* → OBIEKT | schemat pojęciowy, nie wzór |
 
-Żadna z tych czterech definicji nie oblicza tego samego co pozostałe, i żadna
-z pozostałych trzech nie używa rozwinięcia "Topologia-Informacja-Model-
--Dynamika-Rezonans" — ten akronim pojawia się tylko tutaj. Innymi słowy:
-to nie jest jeden mechanizm TIMDR zastosowany w czterech dziedzinach, tylko
-cztery różne mechanizmy noszące tę samą nazwę. Jeśli intencją jest pokazanie,
-że różne systemy mają jakiś próg/warunek odrzucenia (co jest prawdą i samo
-w sobie jest użyteczną obserwacją), warto to tak właśnie nazwać — bez
-sugerowania, że to dosłownie ten sam, przenośny algorytm. Pełne zestawienie:
+Żadna z tych pięciu definicji nie oblicza tego samego co pozostałe, i żadna
+z pozostałych czterech nie używa rozwinięcia "Topologia-Informacja-Model-
+-Dynamika-Rezonans" — ten akronim pojawia się tylko tutaj. Nawet sama nazwa
+klasy `TIMDRAnalyzer` powtarza się dwukrotnie (Synoptyk, EasySound) i liczy
+za każdym razem coś zupełnie innego. Innymi słowy: to nie jest jeden
+mechanizm TIMDR zastosowany w pięciu dziedzinach, tylko pięć różnych
+mechanizmów noszących tę samą nazwę. Jeśli intencją jest pokazanie, że różne
+systemy mają jakiś próg/warunek odrzucenia (co jest prawdą i samo w sobie
+jest użyteczną obserwacją), warto to tak właśnie nazwać — bez sugerowania,
+że to dosłownie ten sam, przenośny algorytm. Pełne zestawienie:
 `TIMDR_POROWNANIE.md`.
